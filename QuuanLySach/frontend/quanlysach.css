@@ -1,0 +1,137 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  background-color: #f0f0f0;
+  width: 220px;
+  padding: 20px;
+  border-right: 1px solid #ccc;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #3366cc;
+  margin-bottom: 30px;
+}
+
+.logo span {
+  color: black;
+}
+
+.user-info {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  background-color: #333;
+  color: white;
+  font-weight: bold;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  font-size: 20px;
+}
+
+.user-id {
+  margin-top: 8px;
+  font-weight: bold;
+}
+
+.role {
+  color: green;
+  font-size: 12px;
+}
+
+.menu a {
+  display: block;
+  padding: 10px;
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.menu a.active,
+.menu a:hover {
+  background-color: #ddd;
+}
+
+.main-content {
+  flex-grow: 1;
+  padding: 30px;
+  background-color: #e6f0ff;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.search-bar input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.search-bar .filter {
+  margin-left: 10px;
+  color: #3366cc;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.table-section {
+  background-color: white;
+  padding: 20px;
+  border-radius: 6px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.table-header .add {
+  color: #3366cc;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+table th,
+table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+table td a {
+  color: #3366cc;
+  margin-right: 5px;
+  text-decoration: none;
+}
+
+table td a.delete {
+  color: red;
+}

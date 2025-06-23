@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quản lý sách</title>
+  <link rel="stylesheet" href="quanlysach.css">
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <div class="logo">Lib.<span>4</span></div>
+      <div class="user-info">
+        <div class="avatar">K</div>
+        <div class="user-id">TTK01</div>
+        <div class="role">Thủ thư</div>
+      </div>
+      <nav class="menu">
+        <a href="#">Thông tin cá nhân</a>
+        <a href="#">Quản lí tài khoản</a>
+        <a class="active" href="#">Quản lí sách</a>
+      </nav>
+    </aside>
+    <main class="main-content">
+      <h1>Quản lí sách</h1>
+      <div class="search-bar">
+        <input type="text" placeholder="Tìm kiếm...">
+        <a href="#" class="filter">Lọc</a>
+      </div>
+      <div class="table-section">
+        <div class="table-header">
+          <h2>Danh sách sách</h2>
+          <a href="#" class="add">Thêm</a>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>Tên sách</th>
+              <th>Tác giả</th>
+              <th>Thể loại</th>
+              <th>Năm xuất bản</th>
+              <th>Tình trạng sách</th>
+              <th>Tương tác</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>LTHDT</td>
+              <td>Trần văn tư</td>
+              <td>CNTT</td>
+              <td>2021</td>
+              <td>mới</td>
+              <td><a href="#">Sửa</a> / <a class="delete" href="#">Xóa</a></td>
+            </tr>
+            <tr>
+              <td>JAVA</td>
+              <td>Nguyễn Nhật Trung</td>
+              <td>CNTT</td>
+              <td>2022</td>
+              <td>hư hỏng</td>
+              <td><a href="#">Sửa</a> / <a class="delete" href="#">Xóa</a></td>
+            </tr>
+            <tr>
+              <td>XSTK</td>
+              <td>Võ Văn Cảnh</td>
+              <td>Toán</td>
+              <td>2023</td>
+              <td>hết</td>
+              <td><a href="#">Sửa</a> / <a class="delete" href="#">Xóa</a></td>
+            </tr>
+            <tr>
+              <td>Hóa vô cơ</td>
+              <td>Lê Phước Thiên</td>
+              <td>Hóa học</td>
+              <td>2024</td>
+              <td>tốt</td>
+              <td><a href="#">Sửa</a> / <a class="delete" href="#">Xóa</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
