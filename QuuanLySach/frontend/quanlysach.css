@@ -1,137 +1,155 @@
-body {
+/* File: lib.4.css */
+
+/* Reset */
+* {
   margin: 0;
-  font-family: Arial, sans-serif;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+body {
+  font-family: Arial, sans-serif;
+  background-color: #e6f0ff;
+  color: #333;
+}
+
+/* Header */
+header {
+  background-color: #bcd4fc;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+/* Layout */
 .container {
   display: flex;
-  height: 100vh;
+  min-height: 90vh;
 }
 
+/* Sidebar */
 .sidebar {
-  background-color: #f0f0f0;
-  width: 220px;
+  background-color: white;
+  width: 200px;
   padding: 20px;
   border-right: 1px solid #ccc;
 }
 
-.logo {
-  font-size: 24px;
-  font-weight: bold;
-  color: #3366cc;
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   margin-bottom: 30px;
 }
 
-.logo span {
-  color: black;
-}
-
-.user-info {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
 .avatar {
-  width: 50px;
-  height: 50px;
-  background-color: #333;
+  background-color: #000;
   color: white;
-  font-weight: bold;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: auto;
-  font-size: 20px;
+  font-weight: bold;
 }
 
-.user-id {
-  margin-top: 8px;
+.username {
   font-weight: bold;
 }
 
 .role {
   color: green;
-  font-size: 12px;
+  font-size: 13px;
 }
 
-.menu a {
-  display: block;
-  padding: 10px;
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar li {
+  margin-bottom: 15px;
+}
+
+.sidebar a {
+  text-decoration: none;
   color: black;
+  font-weight: bold;
+}
+
+.sidebar .active a {
+  color: #1976d2;
+}
+
+/* Main Content */
+.main {
+  flex: 1;
+  padding: 30px;
+  background-color: white;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+.search-add {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.search-add input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.search-add a {
+  color: #1976d2;
   text-decoration: none;
   font-weight: bold;
 }
 
-.menu a.active,
-.menu a:hover {
-  background-color: #ddd;
+.add {
+  margin-left: auto;
 }
 
-.main-content {
-  flex-grow: 1;
-  padding: 30px;
-  background-color: #e6f0ff;
-}
-
-.search-bar {
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
-.search-bar input {
-  flex: 1;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-}
-
-.search-bar .filter {
-  margin-left: 10px;
-  color: #3366cc;
-  cursor: pointer;
-  text-decoration: underline;
-}
-
-.table-section {
-  background-color: white;
-  padding: 20px;
-  border-radius: 6px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-}
-
-.table-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 10px;
-}
-
-.table-header .add {
-  color: #3366cc;
-  text-decoration: underline;
-  cursor: pointer;
-}
-
+/* Table */
 table {
   width: 100%;
   border-collapse: collapse;
+}
+
+table thead {
+  background-color: #f0f0f0;
+}
+
+table th, table td {
+  padding: 12px;
+  border: 1px solid #ccc;
   text-align: left;
 }
 
-table th,
-table td {
-  border: 1px solid #ccc;
-  padding: 10px;
-}
-
-table td a {
-  color: #3366cc;
-  margin-right: 5px;
-  text-decoration: none;
-}
-
-table td a.delete {
+a.danger {
   color: red;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #bcd4fc;
+  font-size: 14px;
+  border-top: 1px solid #ccc;
 }

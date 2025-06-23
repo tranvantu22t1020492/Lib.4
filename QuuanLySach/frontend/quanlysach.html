@@ -3,83 +3,106 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Quản lý sách</title>
+  <title>Lib.4 - Quản lí sách</title>
   <link rel="stylesheet" href="quanlysach.css">
 </head>
+
 <body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <img src="Lib.4.png" alt="Lib.4 Logo" style="width: 40px; height: auto;">
+      <span>Lib.4</span>
+    </div>
+  </header>
+
   <div class="container">
+    <!-- Sidebar -->
     <aside class="sidebar">
-      <div class="logo">Lib.<span>4</span></div>
       <div class="user-info">
         <div class="avatar">K</div>
-        <div class="user-id">TTK01</div>
-        <div class="role">Thủ thư</div>
+        <div>
+          <div class="username">TTK01</div>
+          <div class="role">Thủ thư</div>
+        </div>
       </div>
-      <nav class="menu">
-        <a href="#">Thông tin cá nhân</a>
-        <a href="#">Quản lí tài khoản</a>
-        <a class="active" href="#">Quản lí sách</a>
+      <nav>
+        <ul>
+          <li><a href="#">Thông tin cá nhân</a></li>
+          <li><a href="#">Quản lí tài khoản</a></li>
+          <li class="active"><a href="#">Quản lí sách</a></li>
+          <li><a href="#">Quản lí độc giả</a></li>
+          <li><a href="#">Quản lí nhân viên</a></li>
+          <li><a href="#">Quản lý phiếu</a></li>
+          <li><a href="#">Quản lí nhà cung cấp</a></li>
+          <li><a href="#">Thống kê - Báo cáo</a></li>
+        </ul>
       </nav>
     </aside>
-    <main class="main-content">
+
+    <!-- Main content -->
+    <main class="main">
       <h1>Quản lí sách</h1>
-      <div class="search-bar">
+      <div class="search-add">
         <input type="text" placeholder="Tìm kiếm...">
         <a href="#" class="filter">Lọc</a>
+        <a href="#" class="add">Thêm</a>
       </div>
-      <div class="table-section">
-        <div class="table-header">
-          <h2>Danh sách sách</h2>
-          <a href="#" class="add">Thêm</a>
-        </div>
-        <table>
-          <thead>
-            <tr>
-              <th>Tên sách</th>
-              <th>Tác giả</th>
-              <th>Thể loại</th>
-              <th>Năm xuất bản</th>
-              <th>Tình trạng sách</th>
-              <th>Tương tác</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>LTHDT</td>
-              <td>Trần văn tư</td>
-              <td>CNTT</td>
-              <td>2021</td>
-              <td>mới</td>
-              <td><a href="#">Sửa</a> / <a class="delete" href="#">Xóa</a></td>
-            </tr>
-            <tr>
-              <td>JAVA</td>
-              <td>Nguyễn Nhật Trung</td>
-              <td>CNTT</td>
-              <td>2022</td>
-              <td>hư hỏng</td>
-              <td><a href="#">Sửa</a> / <a class="delete" href="#">Xóa</a></td>
-            </tr>
-            <tr>
-              <td>XSTK</td>
-              <td>Võ Văn Cảnh</td>
-              <td>Toán</td>
-              <td>2023</td>
-              <td>hết</td>
-              <td><a href="#">Sửa</a> / <a class="delete" href="#">Xóa</a></td>
-            </tr>
-            <tr>
-              <td>Hóa vô cơ</td>
-              <td>Lê Phước Thiên</td>
-              <td>Hóa học</td>
-              <td>2024</td>
-              <td>tốt</td>
-              <td><a href="#">Sửa</a> / <a class="delete" href="#">Xóa</a></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Tên sách</th>
+            <th>Tác giả</th>
+            <th>Thể loại</th>
+            <th>Năm xuất bản</th>
+            <th>Tình trạng sách</th>
+            <th>Tương tác</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>LTHDT</td>
+            <td>Trần văn tư</td>
+            <td>CNTT</td>
+            <td>2021</td>
+            <td>mới</td>
+            <td><a href="#">Sửa</a> / <a href="#" class="danger">Xóa</a></td>
+          </tr>
+          <tr>
+            <td>JAVA</td>
+            <td>Nguyễn Nhật Trung</td>
+            <td>CNTT</td>
+            <td>2022</td>
+            <td>hư hỏng</td>
+            <td><a href="#">Sửa</a> / <a href="#" class="danger">Xóa</a></td>
+          </tr>
+          <tr>
+            <td>XSTK</td>
+            <td>Võ Văn Cảnh</td>
+            <td>Toán</td>
+            <td>2023</td>
+            <td>hết</td>
+            <td><a href="#">Sửa</a> / <a href="#" class="danger">Xóa</a></td>
+          </tr>
+          <tr>
+            <td>Hóa vô cơ</td>
+            <td>Lê Phước Thiên</td>
+            <td>Hóa học</td>
+            <td>2024</td>
+            <td>tốt</td>
+            <td><a href="#">Sửa</a> / <a href="#" class="danger">Xóa</a></td>
+          </tr>
+        </tbody>
+      </table>
     </main>
   </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Lib.4</p>
+  </footer>
+
 </body>
 </html>
