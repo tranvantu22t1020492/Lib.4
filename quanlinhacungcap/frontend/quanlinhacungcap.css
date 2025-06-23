@@ -1,12 +1,11 @@
-/* Reset và font mặc định */
+/* Reset và thiết lập cơ bản */
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
   font-family: Arial, sans-serif;
 }
 
-/* Body tổng thể */
 body {
   background-color: #e6f0ff;
   display: flex;
@@ -20,7 +19,6 @@ header {
   padding: 10px 20px;
   display: flex;
   align-items: center;
-  border-bottom: 1px solid #ccc;
 }
 
 .logo {
@@ -83,7 +81,7 @@ header {
 
 .sidebar li.active a {
   font-weight: bold;
-  color: black;
+  color: #000;
 }
 
 .sidebar a {
@@ -91,11 +89,7 @@ header {
   color: #555;
 }
 
-.sidebar a.danger {
-  color: red;
-}
-
-/* Main content */
+/* Nội dung chính */
 .main {
   flex: 1;
   padding: 30px;
@@ -104,10 +98,9 @@ header {
 
 .main h1 {
   margin-bottom: 20px;
-  font-size: 1.6em;
+  font-size: 24px;
 }
 
-/* Thanh tìm kiếm và thêm */
 .search-add {
   display: flex;
   align-items: center;
@@ -116,20 +109,20 @@ header {
 }
 
 .search-add input {
-  padding: 8px 10px;
-  flex: 1;
+  padding: 8px;
+  flex-grow: 1;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 4px;
 }
 
 .filter,
 .add {
   text-decoration: none;
-  color: #1976d2;
+  color: #007bff;
   font-weight: bold;
 }
 
-/* Bảng danh sách */
+/* Bảng */
 table {
   width: 100%;
   border-collapse: collapse;
@@ -148,7 +141,6 @@ td {
 
 a.danger {
   color: red;
-  text-decoration: none;
 }
 
 /* Footer */
@@ -156,6 +148,5 @@ footer {
   text-align: center;
   padding: 10px;
   background-color: #b3ccff;
-  font-size: 0.9em;
-  border-top: 1px solid #ccc;
+  font-size: 14px;
 }

@@ -1,73 +1,59 @@
 // File: server.js
 const express = require('express');
+const mysql = require('mysql');
 const cors = require('cors');
-const app = express();
-const port = 3000;
 
-// Middleware
+const app = express();
 app.use(cors());
 app.use(express.json());
 
-// Dữ liệu mẫu (tạm lưu trong bộ nhớ)
-let phieuList = [
-  {
-    id: 1,
-    tenPhieu: "Phiếu nhận",
-    chuThich: "Đơn hàng vừa được nhà cung cấp..."
-  },
-  {
-    id: 2,
-    tenPhieu: "Phiếu trả",
-    chuThich: "Độc giả A vừa trả..."
-  },
-  {
-    id: 3,
-    tenPhieu: "Phiếu phạt",
-    chuThich: "Độc giả C làm hỏng sách..."
-  },
-  {
-    id: 4,
-    tenPhieu: "Phiếu mượn",
-    chuThich: "Độc giả B vừa mượn sách..."
-  }
-];
-
-// API: Lấy tất cả phiếu
-app.get('/api/phieu', (req, res) => {
-  res.json(phieuList);
+// Kết nối MySQL
+const db = mysql.createConnection({
+  host: 'localhost',
+  user: 'root',
+  password: '',
+  database: 'lib4_db'
 });
 
-// API: Thêm phiếu mới
-app.post('/api/phieu', (req, res) => {
-  const newPhieu = {
-    id: Date.now(),
-    tenPhieu: req.body.tenPhieu,
-    chuThich: req.body.chuThich
-  };
-  phieuList.push(newPhieu);
-  res.status(201).json(newPhieu);
+db.connect((err) => {
+  if (err) throw err;
+  console.log('✅ Đã kết nối MySQL');
 });
 
-// API: Sửa phiếu
-app.put('/api/phieu/:id', (req, res) => {
-  const id = parseInt(req.params.id);
-  const index = phieuList.findIndex(p => p.id === id);
-  if (index !== -1) {
-    phieuList[index] = { ...phieuList[index], ...req.body };
-    res.json(phieuList[index]);
-  } else {
-    res.status(404).json({ error: 'Phiếu không tồn tại' });
-  }
+// API lấy tất cả nhà cung cấp
+app.get('/suppliers', (req, res) => {
+  db.query('SELECT * FROM Suppliers', (err, result) => {
+    if (err) return res.status(500).send(err);
+    res.json(result);
+  });
 });
 
-// API: Xóa phiếu
-app.delete('/api/phieu/:id', (req, res) => {
-  const id = parseInt(req.params.id);
-  phieuList = phieuList.filter(p => p.id !== id);
-  res.status(204).end();
+// API thêm nhà cung cấp
+app.post('/suppliers', (req, res) => {
+  const { name, receiptCode } = req.body;
+  db.query('INSERT INTO Suppliers (name, receipt_code) VALUES (?, ?)', [name, receiptCode], (err, result) => {
+    if (err) return res.status(500).send(err);
+    res.sendStatus(200);
+  });
 });
 
-// Start server
-app.listen(port, () => {
-  console.log(`Server đang chạy tại http://localhost:${port}`);
+// API cập nhật nhà cung cấp
+app.put('/suppliers/:id', (req, res) => {
+  const { name, receiptCode } = req.body;
+  db.query('UPDATE Suppliers SET name = ?, receipt_code = ? WHERE id = ?', [name, receiptCode, req.params.id], (err, result) => {
+    if (err) return res.status(500).send(err);
+    res.sendStatus(200);
+  });
+});
+
+// API xóa nhà cung cấp
+app.delete('/suppliers/:id', (req, res) => {
+  db.query('DELETE FROM Suppliers WHERE id = ?', [req.params.id], (err, result) => {
+    if (err) return res.status(500).send(err);
+    res.sendStatus(200);
+  });
+});
+
+app.listen(3000, () => {
+  console.log('🚀 Server đang chạy tại http://localhost:3000');
 });
