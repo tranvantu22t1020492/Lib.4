@@ -3,10 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Lib.4 - Quản lí tài khoản</title>
-  <link rel="stylesheet" href="lib.4.css">
+  <title>Lib.4 - Quản lí độc giả</title>
+  <link rel="stylesheet" href="qldg.css">
 </head>
 <body>
+
+  <!-- Header -->
   <header>
     <div class="logo">
       <img src="Lib.4.png" alt="Lib.4 Logo" style="width: 40px; height: auto;">
@@ -27,9 +29,9 @@
       <nav>
         <ul>
           <li><a href="#">Thông tin cá nhân</a></li>
-          <li class="active"><a href="#">Quản lí tài khoản</a></li>
+          <li><a href="#">Quản lí tài khoản</a></li>
           <li><a href="#">Quản lí sách</a></li>
-          <li><a href="#">Quản lí độc giả</a></li>
+          <li class="active"><a href="#">Quản lí độc giả</a></li>
           <li><a href="#">Quản lí nhân viên</a></li>
           <li><a href="#">Quản lí phiếu</a></li>
           <li><a href="#">Quản lí nhà cung cấp</a></li>
@@ -41,7 +43,7 @@
 
     <!-- Main content -->
     <main class="main">
-      <h1>Quản lí tài khoản</h1>
+      <h1>Quản lí độc giả</h1>
       <div class="search-add">
         <input type="text" placeholder="Tìm kiếm...">
         <a href="#" class="filter">Lọc</a>
@@ -51,40 +53,45 @@
       <table>
         <thead>
           <tr>
-            <th>Tên tài khoản</th>
-            <th>Vai trò</th>
+            <th>Mã độc giả</th>
+            <th>Tên độc giả</th>
             <th>Số điện thoại</th>
             <th>Email</th>
+            <th>Cấp độ thành viên</th>
             <th>Tương tác</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>TTK01</td>
-            <td>Thủ thư</td>
+            <td>DG01</td>
+            <td>TDK01</td>
             <td>0123456789</td>
             <td>tkk01@gmail.com</td>
+            <td>Bạc</td>
             <td><a href="#">Sửa</a> / <a href="#" class="danger">Xóa</a></td>
           </tr>
           <tr>
-            <td>TTK02</td>
-            <td>Nhân viên</td>
+            <td>DG02</td>
+            <td>TDG02</td>
             <td>0876543219</td>
             <td>tkk02@gmail.com</td>
+            <td>Vàng</td>
             <td><a href="#">Sửa</a> / <a href="#" class="danger">Xóa</a></td>
           </tr>
           <tr>
-            <td>TTK03</td>
-            <td>Nhân viên</td>
+            <td>DG03</td>
+            <td>TDG03</td>
             <td>0597384261</td>
             <td>tkk03@gmail.com</td>
+            <td>Kim cương</td>
             <td><a href="#">Sửa</a> / <a href="#" class="danger">Xóa</a></td>
           </tr>
           <tr>
-            <td>TTK04</td>
-            <td>Độc giả</td>
+            <td>DG04</td>
+            <td>TDG04</td>
             <td>0987643194</td>
             <td>tkk04@gmail.com</td>
+            <td>Đồng</td>
             <td><a href="#">Sửa</a> / <a href="#" class="danger">Xóa</a></td>
           </tr>
         </tbody>
