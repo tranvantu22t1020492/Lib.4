@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lib.4 - Quản lí phiếu</title>
+  <link rel="stylesheet" href="quanlyphieu.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="Lib.4.png" alt="Lib.4 Logo" style="width: 40px; height: auto;" />
+      <span>Lib.4</span>
+    </div>
+  </header>
+
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="user-info">
+        <div class="avatar">K</div>
+        <div>
+          <div class="username">TTK01</div>
+          <div class="role">Thủ thư</div>
+        </div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#">Thông tin cá nhân</a></li>
+          <li><a href="#">Quản lí tài khoản</a></li>
+          <li><a href="#">Quản lí sách</a></li>
+          <li><a href="#">Quản lí độc giả</a></li>
+          <li><a href="#">Quản lí nhân viên</a></li>
+          <li class="active"><a href="#">Quản lí phiếu</a></li>
+          <li><a href="#">Quản lí nhà cung cấp</a></li>
+          <li><a href="#">Thống kê - Báo cáo</a></li>
+          <li><a href="#" class="danger">Đăng xuất</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main content -->
+    <main class="main">
+      <h1>Quản lí phiếu</h1>
+      <div class="search-add">
+        <input type="text" placeholder="Tìm kiếm..." />
+        <a href="#" class="filter">Lọc</a>
+        <a href="#" class="add">Thêm</a>
+      </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Tên phiếu</th>
+            <th>Chú thích</th>
+            <th>Tương tác</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Phiếu nhận</td>
+            <td>Đơn hàng vừa được nhà cung cấp....</td>
+            <td><a href="#">Sửa</a> / <a href="#" class="danger">Xóa</a></td>
+          </tr>
+          <tr>
+            <td>Phiếu trả</td>
+            <td>Độc giả A vừa trả.....</td>
+            <td><a href="#">Sửa</a> / <a href="#" class="danger">Xóa</a></td>
+          </tr>
+          <tr>
+            <td>Phiếu phạt</td>
+            <td>Độc giả C làm hỏng sách.....</td>
+            <td><a href="#">Sửa</a> / <a href="#" class="danger">Xóa</a></td>
+          </tr>
+          <tr>
+            <td>Phiếu mượn</td>
+            <td>Độc giả B vừa mượn sách....</td>
+            <td><a href="#">Sửa</a> / <a href="#" class="danger">Xóa</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </main>
+  </div>
+
+  <footer>
+    <p>© 2025 Lib.4</p>
+  </footer>
+</body>
+</html>
