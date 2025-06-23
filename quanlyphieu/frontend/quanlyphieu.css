@@ -1,0 +1,161 @@
+/* Reset và font mặc định */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Body tổng thể */
+body {
+  background-color: #e6f0ff;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header */
+header {
+  background-color: #b3ccff;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+/* Layout chính */
+.container {
+  flex: 1;
+  display: flex;
+}
+
+/* Sidebar */
+.sidebar {
+  background-color: white;
+  width: 220px;
+  padding: 20px;
+  border-right: 1px solid #ccc;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.avatar {
+  background-color: black;
+  color: white;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.username {
+  font-weight: bold;
+}
+
+.role {
+  color: green;
+  font-size: 0.9em;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin: 15px 0;
+}
+
+.sidebar li.active a {
+  font-weight: bold;
+  color: black;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: #555;
+}
+
+.sidebar a.danger {
+  color: red;
+}
+
+/* Main content */
+.main {
+  flex: 1;
+  padding: 30px;
+  background-color: white;
+}
+
+.main h1 {
+  margin-bottom: 20px;
+  font-size: 1.6em;
+}
+
+/* Thanh tìm kiếm và thêm */
+.search-add {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.search-add input {
+  padding: 8px 10px;
+  flex: 1;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.filter,
+.add {
+  text-decoration: none;
+  color: #1976d2;
+  font-weight: bold;
+}
+
+/* Bảng danh sách */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead {
+  background-color: #f2f2f2;
+}
+
+th,
+td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+a.danger {
+  color: red;
+  text-decoration: none;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #b3ccff;
+  font-size: 0.9em;
+  border-top: 1px solid #ccc;
+}

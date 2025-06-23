@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Lib.4 - Quản lí tài khoản</title>
-  <link rel="stylesheet" href="lib.4.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lib.4 - Quản lí phiếu</title>
+  <link rel="stylesheet" href="quanlyphieu.css" />
 </head>
 <body>
   <header>
     <div class="logo">
-      <img src="Lib.4.png" alt="Lib.4 Logo" style="width: 40px; height: auto;">
+      <img src="Lib.4.png" alt="Lib.4 Logo" style="width: 40px; height: auto;" />
       <span>Lib.4</span>
     </div>
   </header>
@@ -27,11 +27,11 @@
       <nav>
         <ul>
           <li><a href="#">Thông tin cá nhân</a></li>
-          <li class="active"><a href="#">Quản lí tài khoản</a></li>
+          <li><a href="#">Quản lí tài khoản</a></li>
           <li><a href="#">Quản lí sách</a></li>
           <li><a href="#">Quản lí độc giả</a></li>
           <li><a href="#">Quản lí nhân viên</a></li>
-          <li><a href="#">Quản lí phiếu</a></li>
+          <li class="active"><a href="#">Quản lí phiếu</a></li>
           <li><a href="#">Quản lí nhà cung cấp</a></li>
           <li><a href="#">Thống kê - Báo cáo</a></li>
           <li><a href="#" class="danger">Đăng xuất</a></li>
@@ -41,9 +41,9 @@
 
     <!-- Main content -->
     <main class="main">
-      <h1>Quản lí tài khoản</h1>
+      <h1>Quản lí phiếu</h1>
       <div class="search-add">
-        <input type="text" placeholder="Tìm kiếm...">
+        <input type="text" placeholder="Tìm kiếm..." />
         <a href="#" class="filter">Lọc</a>
         <a href="#" class="add">Thêm</a>
       </div>
@@ -51,40 +51,30 @@
       <table>
         <thead>
           <tr>
-            <th>Tên tài khoản</th>
-            <th>Vai trò</th>
-            <th>Số điện thoại</th>
-            <th>Email</th>
+            <th>Tên phiếu</th>
+            <th>Chú thích</th>
             <th>Tương tác</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>TTK01</td>
-            <td>Thủ thư</td>
-            <td>0123456789</td>
-            <td>tkk01@gmail.com</td>
+            <td>Phiếu nhận</td>
+            <td>Đơn hàng vừa được nhà cung cấp....</td>
             <td><a href="#">Sửa</a> / <a href="#" class="danger">Xóa</a></td>
           </tr>
           <tr>
-            <td>TTK02</td>
-            <td>Nhân viên</td>
-            <td>0876543219</td>
-            <td>tkk02@gmail.com</td>
+            <td>Phiếu trả</td>
+            <td>Độc giả A vừa trả.....</td>
             <td><a href="#">Sửa</a> / <a href="#" class="danger">Xóa</a></td>
           </tr>
           <tr>
-            <td>TTK03</td>
-            <td>Nhân viên</td>
-            <td>0597384261</td>
-            <td>tkk03@gmail.com</td>
+            <td>Phiếu phạt</td>
+            <td>Độc giả C làm hỏng sách.....</td>
             <td><a href="#">Sửa</a> / <a href="#" class="danger">Xóa</a></td>
           </tr>
           <tr>
-            <td>TTK04</td>
-            <td>Độc giả</td>
-            <td>0987643194</td>
-            <td>tkk04@gmail.com</td>
+            <td>Phiếu mượn</td>
+            <td>Độc giả B vừa mượn sách....</td>
             <td><a href="#">Sửa</a> / <a href="#" class="danger">Xóa</a></td>
           </tr>
         </tbody>
@@ -92,11 +82,8 @@
     </main>
   </div>
 
-  <!-- Footer -->
   <footer>
     <p>© 2025 Lib.4</p>
   </footer>
-
 </body>
-
 </html>
